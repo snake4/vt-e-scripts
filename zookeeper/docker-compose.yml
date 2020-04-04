@@ -1,0 +1,27 @@
+version: "3.6"
+services:
+  my-zookeeper:
+    build: . 
+    image: zookeeper:3.4.14
+    container_name: my-zookeeper
+    restart: unless-stopped
+    hostname: 'my-zookeeper'
+
+    ports: 
+      - "2181:2181"
+      - "2888:2888"
+      - "3888:3888"
+
+    volumes: 
+      - "./zk_home/data:/data"
+      - "./zk_home/datalog:/datalog"
+      - "./zk_home/logs:/logs"
+      - "../hosts:/etc/hosts"
+    networks:
+      default:
+       ipv4_address: 172.24.0.75
+networks:
+  default:
+    external:
+      name: my-network
+

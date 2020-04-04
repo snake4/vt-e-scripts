@@ -1,0 +1,25 @@
+version: "3.6"
+services:
+  my-elasticsearch:
+    build: . 
+    image: elasticsearch:5.4.2
+    container_name: my-elasticsearch
+    restart: unless-stopped
+    hostname: 'my-elasticsearch'
+    environment:
+      ES_JAVA_OPTS: "-Xms256m -Xmx256m"
+    ports: 
+      - "9200:9200"
+      - "9300:9300"
+
+    volumes: 
+      - "./es_home/data:/usr/share/elasticsearch/data"
+      - "../hosts:/etc/hosts"
+    networks:
+      default:
+       ipv4_address: 172.24.0.77
+networks:
+  default:
+    external:
+      name: my-network
+

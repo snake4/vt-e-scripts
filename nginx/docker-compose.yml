@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  my-nginx:
+    build: .
+    image: daocloud.io/library/nginx:1.17.8
+    container_name: my-nginx
+    ports: 
+      - "80:80"
+      - "443:443"
+    volumes: 
+      - "./nginx_home/conf.d:/etc/nginx/conf.d"
+      - "./nginx_home/nginx.conf:/etc/nginx/nginx.conf:ro"
+      - "./nginx_home/log:/var/log/nginx"
+      - "./nginx_home/html:/usr/share/nginx/html:ro"
+      - "../hosts:/etc/hosts"
+    restart: unless-stopped
+    command: 
+      - nginx
+      - -g
+      - daemon off;
+    networks:
+      default:
+       ipv4_address: 172.24.0.5
+      
+networks:
+  default:
+    external:
+      name: my-network

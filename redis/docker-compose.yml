@@ -1,0 +1,24 @@
+version: "3.6"
+services:
+  my-redis:
+    build: .
+    image: redis:5.0
+    container_name: my-redis
+    ports: 
+      - "6379:6379"
+    volumes: 
+      - "./redis_home/config:/config"
+      - "./redis_home/data:/data"
+      - "../hosts:/etc/hosts"
+    entrypoint:
+      - docker-entrypoint.sh
+    command: 
+      - redis-server
+      - /config/redis.conf
+    networks:
+      default:
+       ipv4_address: 172.24.0.6
+networks:
+  default:
+    external:
+      name: my-network

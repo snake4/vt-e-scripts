@@ -1,0 +1,21 @@
+version: "3.6"
+services:
+  my-jenkins:
+    build: .
+    image: jenkins/jenkins:lts
+    container_name: my-jenkins
+    ports: 
+      - "7800:8080"
+      - "50000:50000"
+    volumes: ["./jenkins_home:/var/jenkins_home","../hosts:/etc/hosts"] 
+    entrypoint: 
+      - /sbin/tini
+      - --
+      - /usr/local/bin/jenkins.sh
+    networks:
+      default:
+       ipv4_address: 172.24.0.88
+networks:
+  default:
+    external:
+      name: my-network
