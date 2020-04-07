@@ -115,7 +115,9 @@ under the License.
      | 
      | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are 
      |       used together. -->
-    <server>
+    
+
+	<server>
       <id>nexus-snapshots</id>
       <username>admin</username>
       <password>admin123</password>
@@ -188,6 +190,17 @@ under the License.
         <name>JBoss Public Repository Group</name>  
         <url>http://repository.jboss.org/nexus/content/groups/public</url>  
     </mirror>  -->
+	 
+    <mirror>
+        <id>nexus-releases</id>
+        <name>internal nexus repository</name>
+        <!--镜像采用配置好的组的地址-->
+        <url>http://my-nexus:8081/repository/maven-releases/</url>
+        <mirrorOf>nexus-releases</mirrorOf>
+    </mirror>
+  
+	
+	
 	<mirror>
         <id>nexus-aliyun</id>
         <mirrorOf>*</mirrorOf>
@@ -297,6 +310,43 @@ under the License.
       </properties>
     </profile>
     -->
+	 <profile>
+  <id>nexus-pr</id>
+   <!-- 远程仓库列表 -->
+  <repositories>
+    <repository>
+      <id>nexus-releases</id>
+      <name>Nexus Central</name>
+     <!-- 虚拟的URL形式,指向镜像的URL-->
+      <url>http://my-nexus:8081/repository/maven-releases/</url>
+      <layout>default</layout>
+     <!-- 表示可以从这个仓库下载releases版本的构件-->  
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+     <!-- 表示可以从这个仓库下载snapshot版本的构件 -->  
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+   <!-- 插件仓库列表 -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>nexus-releases</id>
+      <name>Nexus Central</name>
+      <url>http://my-nexus:8081/repository/maven-releases/</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+         <enabled>true</enabled>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
+   </profile>
+ 
   </profiles>
 
   <!-- activeProfiles
@@ -307,4 +357,8 @@ under the License.
     <activeProfile>anotherAlwaysActiveProfile</activeProfile>
   </activeProfiles>
   -->
+  <activeProfiles>
+    
+    <activeProfile>nexus-pr</activeProfile>
+  </activeProfiles>
 </settings>
