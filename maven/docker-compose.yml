@@ -8,12 +8,18 @@ services:
     tty: true
     privileged: true
     working_dir: /home/myuser/projects
+    environment:
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALLL: en_US.UTF-8
     volumes: 
       - "./mvn_home/settings.xml:/usr/share/maven/conf/settings.xml"
       - "./mvn_home/projects/:/home/myuser/projects/"
       - "./mvn_home/repository/:/root/.m2/repository/"       
       - "../hosts:/etc/hosts"
-    
+    ports: 
+      - "8380:8380"
+      - "8329:8329"
     command:
       - /bin/bash
       - -c
