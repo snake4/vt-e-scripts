@@ -12,7 +12,7 @@
     linux机器有独立局域网ip并且能上网
     
 # 安装步骤:   
-1.下载vt-e-scripts，解压到 scripts/ 目录下
+## 1.下载vt-e-scripts，解压到 scripts/ 目录下
 
 执行chmod 777 –R scripts/
 
@@ -23,7 +23,7 @@ cd scripts
 直到输出如下信息。安装成功   
 ![](https://github.com/snake4/vt-picture/blob/master/1.png)
 
-2.导入镜像  
+## 2.导入镜像  
 下载镜像https://pan.baidu.com/s/156IQIvDFviINBPjG6zIzKQ
 提取码：d6iv   
 例如:docker load -i mysql.tar   
