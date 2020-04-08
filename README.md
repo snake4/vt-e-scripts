@@ -47,3 +47,12 @@ C:\Windows\System32\drivers\etc\hosts里面添加linux的ip,我这里ip是192.16
 ### 1.打开浏览器输入http://my-nexus:8081/  更改admin 用户的密码为admin123
 ### 2.更改maven-releases 可以allow redeploy
 ![](https://github.com/snake4/vt-picture/blob/master/4.png)
+### 3.linux机器的scripts/maven目录下
+执行./buildm-project.sh 直到完成  
+再执行./start-project.sh  
+
+# 测试
+用postman或者其他工具模拟请求
+## 1.初始化用户
+http://my-nginx/demo-service/init_user  
+![](https://github.com/snake4/vt-picture/blob/master/5.png)
