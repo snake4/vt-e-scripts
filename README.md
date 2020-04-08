@@ -28,3 +28,11 @@ cd scripts
 提取码：d6iv   
 例如:docker load -i mysql.tar   
 ![](https://github.com/snake4/vt-picture/blob/master/2.png)
+
+## 3.安装启动镜像
+nexus,redis，nginx，mysql，maven,按这个顺序，在各自目录下执行./run.sh  
+如果没有导入镜像这一步也可以安装镜像
+
+## 4.安装完成确认
+![](https://github.com/snake4/vt-picture/blob/master/3.png)
+
