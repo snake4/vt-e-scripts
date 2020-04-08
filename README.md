@@ -22,3 +22,9 @@ cd scripts
 
 直到输出如下信息。安装成功   
 ![](https://github.com/snake4/vt-picture/blob/master/1.png)
+
+2.导入镜像  
+下载镜像https://pan.baidu.com/s/156IQIvDFviINBPjG6zIzKQ
+提取码：d6iv   
+例如:docker load -i mysql.tar   
+![](https://github.com/snake4/vt-picture/blob/master/2.png)
