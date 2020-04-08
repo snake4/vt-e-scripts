@@ -80,5 +80,11 @@ http://my-nginx/demo-service/getNeedToken
 ![](https://github.com/snake4/vt-picture/blob/master/10.png)
 
 # 技术支持
-邮箱:yindongliang0531@163.com
-微信:dlyinha
+邮箱:yindongliang0531@163.com  
+微信:dlyinha  
+
+# 招募
+## 前端
+要求:对前端开源技术热爱,精通vue2,node.js,elementui,uni-app开发，以及各种组件的使用，并且具有自己开发组件的能力  
+现在目前阶段主要完成vt-pc-admin 的开发，有意者可发送简历至邮箱
+
