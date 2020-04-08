@@ -90,7 +90,7 @@ http://my-nginx/demo-service/getNeedToken
 
 # 赞赏
 开源不易,觉得不错就帮忙点个星吧   
-有条件的小伙伴们也可以赞赏一下   
+也可以请作者喝杯咖啡,这样更有动力,谢谢  
 ![](https://github.com/snake4/vt-picture/blob/master/skm.png)
 
 
