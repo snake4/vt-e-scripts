@@ -83,8 +83,9 @@ http://my-nginx/demo-service/getNeedToken
 邮箱:yindongliang0531@163.com  
 微信:dlyinha  
 
-# 招募
+# 招募合作伙伴
 ## 前端
 要求:对前端开源技术热爱,精通vue2,node.js,elementui,uni-app开发，以及各种组件的使用，并且具有自己开发组件的能力  
-现在目前阶段主要完成vt-pc-admin 的前端开发，有意者可发送简历至邮箱
+现在目前阶段主要完成vt-pc-admin 的前端开发，伙伴们可发送简历至邮箱
+
 
