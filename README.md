@@ -78,3 +78,7 @@ http://my-nginx/authen-center/shiro/lgout
 http://my-nginx/demo-service/getNeedToken 
 请求头里面没有设置Authorization  
 ![](https://github.com/snake4/vt-picture/blob/master/10.png)
+
+# 技术支持
+邮箱:yindongliang0531@163.com
+微信:dlyinha
