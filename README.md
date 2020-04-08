@@ -89,7 +89,8 @@ http://my-nginx/demo-service/getNeedToken
 现在目前阶段主要完成vt-pc-admin 的前端开发，伙伴们可发送简历至邮箱
 
 # 赞赏
-开源不易,点个星哈~条件好多伙伴们赞赏一下吧~  
+开源不易,点个星哈   
+条件好多伙伴们赞赏一下吧   
 ![](https://github.com/snake4/vt-picture/blob/master/skm.png)
 
 
