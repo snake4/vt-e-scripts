@@ -1,4 +1,3 @@
-# vt-e-scripts
 # 开发目的:  
 前后端分离的微服务架构下,项目越来越多，为了避免重复造轮子，这是一套可以快速帮助开发人员迅速构建出后台的整套框架，让后台开发迅速投入到业务编码中。
 
@@ -34,5 +33,17 @@ nexus,redis，nginx，mysql，maven,按这个顺序，在各自目录下执行./
 如果没有导入镜像这一步也可以安装镜像
 
 ## 4.安装完成确认
+执行docker ps | grep my   
 ![](https://github.com/snake4/vt-picture/blob/master/3.png)
 
+# 配置
+## 开发人员PC配置
+C:\Windows\System32\drivers\etc\hosts里面添加linux的ip,我这里ip是192.168.1.195   
+192.168.1.195  my-mysql  
+192.168.1.195  my-nginx  
+192.168.1.195  my-redis  
+192.168.1.195  my-nexus  
+## nexus配置
+### 1.打开浏览器输入http://my-nexus:8081/  更改admin 用户的密码为admin123
+### 2.更改maven-releases 可以allow redeploy
+![](https://github.com/snake4/vt-picture/blob/master/4.png)
