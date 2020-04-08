@@ -20,4 +20,5 @@ cd scripts
 
 ./docker-install.sh
 
-直到输出如下信息。安装成功
+直到输出如下信息。安装成功   
+![](https://github.com/snake4/vt-picture/blob/master/1.png)
