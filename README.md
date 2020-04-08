@@ -73,3 +73,8 @@ http://my-nginx/demo-service/getNoNeedToken
 ## 退出用户登陆
 http://my-nginx/authen-center/shiro/lgout
 ![](https://github.com/snake4/vt-picture/blob/master/9.png)
+
+## 无token访问失败
+http://my-nginx/demo-service/getNeedToken 
+请求头里面没有设置Authorization  
+![](https://github.com/snake4/vt-picture/blob/master/10.png)
