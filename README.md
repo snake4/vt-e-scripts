@@ -56,3 +56,7 @@ C:\Windows\System32\drivers\etc\hosts里面添加linux的ip,我这里ip是192.16
 ## 1.初始化用户
 http://my-nginx/demo-service/init_user  
 ![](https://github.com/snake4/vt-picture/blob/master/5.png)
+
+## 2.用户登陆
+http://my-nginx/authen-center/shiro/appLogin?appid=admin&password=admin123  
+![](https://github.com/snake4/vt-picture/blob/master/6.png)
