@@ -192,11 +192,11 @@ under the License.
     </mirror>  -->
 	 
     <mirror>
-        <id>nexus-releases</id>
+        <id>my-nexus-releases</id>
         <name>internal nexus repository</name>
         <!--镜像采用配置好的组的地址-->
         <url>http://my-nexus:8081/repository/maven-releases/</url>
-        <mirrorOf>nexus-releases</mirrorOf>
+        <mirrorOf>my-nexus-releases</mirrorOf>
     </mirror>
   
 	
@@ -315,7 +315,7 @@ under the License.
    <!-- 远程仓库列表 -->
   <repositories>
     <repository>
-      <id>nexus-releases</id>
+      <id>my-nexus-releases</id>
       <name>Nexus Central</name>
      <!-- 虚拟的URL形式,指向镜像的URL-->
       <url>http://my-nexus:8081/repository/maven-releases/</url>
@@ -333,7 +333,7 @@ under the License.
    <!-- 插件仓库列表 -->
   <pluginRepositories>
     <pluginRepository>
-      <id>nexus-releases</id>
+      <id>my-nexus-releases</id>
       <name>Nexus Central</name>
       <url>http://my-nexus:8081/repository/maven-releases/</url>
       <layout>default</layout>
@@ -361,4 +361,5 @@ under the License.
     
     <activeProfile>nexus-pr</activeProfile>
   </activeProfiles>
+
 </settings>
