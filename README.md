@@ -10,7 +10,8 @@ with this framework, the developer can build the mircor-service endfront very fa
 # including:  
     authentication center, authentication client,  arbitrary multi-datasource, log4j2 ,security of http,thread pool, redisson distribute lock and so on
  
-# 主要技术以及软件版本：  
+# 主要技术以及软件版本：
+# main technology and version of software: 
     springboot2.0.2 ，centos7(内核3.10以上)，docker19,redis5,nginx1.17,mysql8,nexus3
     
 # 前提条件:   
