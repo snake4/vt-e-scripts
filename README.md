@@ -99,7 +99,7 @@ http://my-nginx/demo-service/getNeedToken
 
 # 赞赏
 开源不易,觉得不错就帮忙点个星吧   
-也可以请作者喝杯咖啡,这样更有动力,谢谢  
+也可以请作者喝杯咖啡,感谢支持  
 ![](https://github.com/snake4/vt-picture/blob/master/skm.png)
 
 
