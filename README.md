@@ -13,16 +13,13 @@
     linux机器有独立局域网ip并且能上网  |
     a linux server which has a IP of LAN and could connect internet.
     
-# 安装步骤:   
-## 1.下载vt-e-scripts，解压到 scripts/ 目录下
-
-执行chmod 777 –R scripts/
-
-cd scripts
-
-./docker-install.sh
-
-直到输出如下信息。安装成功   
+# 安装步骤(install steps):   
+## 1.下载vt-e-scripts，解压到 scripts/ 目录下(download vt-e-scripts.zip, unzip it to folder "scripts/")
+执行(execute)  
+chmod 777 –R scripts/  
+cd scripts  
+./docker-install.sh  
+直到输出如下信息。安装成功(util the following message is output)   
 ![](https://github.com/snake4/vt-picture/blob/master/1.png)
 
 ## 2.导入镜像  
