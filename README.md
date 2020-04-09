@@ -1,22 +1,17 @@
-# 开发目的:  
-    移动互联前后端分离的微服务架构下,项目越来越多，为了避免重复造轮子，这是一套可以快速帮助开发人员迅速构建出后台的整套框架，让后台开发迅速投入到业务编码中。
-# purpose:  
+# 开发目的(purpose):  
+    移动互联前后端分离的微服务架构下,项目越来越多，为了避免重复造轮子，这是一套可以快速帮助开发人员迅速构建出后台的整套框架，让后台开发迅速投入到业务编码中。|
     with the time of micro-service development,the projects are more and more,for avoiding doing the same thing,this framework is born.
 with this framework, the developer can build the mircor-service endfront very fast and dedicate themself into business logic development.
 
-# 系统包括：   
-    认证中心，认证中心客户端，任意多数据源连接组件，log4j2日志输出，http安全和线程池，redisson分布式锁等组件。
-# including:  
+# 系统包括(including)：   
+    认证中心，认证中心客户端，任意多数据源连接组件，log4j2日志输出，http安全和线程池，redisson分布式锁等组件。|  
     authentication center, authentication client,  arbitrary multi-datasource, log4j2 ,security of http,thread pool, redisson distribute lock and so on
  
-# 主要技术以及软件版本：
-    springboot2.0.2 ，centos7(内核3.10以上)，docker19,redis5,nginx1.17,mysql8,nexus3 
-# main technology and version of software:  
+# 主要技术以及软件版本(main technology and version of software)：
     springboot2.0.2 ，centos7(kernel 3.10 above)，docker19,redis5,nginx1.17,mysql8,nexus3
     
-# 前提条件:   
-    linux机器有独立局域网ip并且能上网
-# pre-condition: 
+# 前提条件(pre-condition):   
+    linux机器有独立局域网ip并且能上网  |
     a linux server which has a IP of LAN and could connect internet.
     
 # 安装步骤:   
