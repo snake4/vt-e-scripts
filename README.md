@@ -1,7 +1,7 @@
 # 开发目的:  
-移动互联前后端分离的微服务架构下,项目越来越多，为了避免重复造轮子，这是一套可以快速帮助开发人员迅速构建出后台的整套框架，让后台开发迅速投入到业务编码中。
+    移动互联前后端分离的微服务架构下,项目越来越多，为了避免重复造轮子，这是一套可以快速帮助开发人员迅速构建出后台的整套框架，让后台开发迅速投入到业务编码中。
 # purpose:  
-with the time of micro-service development,the projects are more and more,for avoiding doing the same thing,this framework is born.
+    with the time of micro-service development,the projects are more and more,for avoiding doing the same thing,this framework is born.
 with this framework, the developer can build the mircor-service endfront very fast and dedicate themself into business logic development.
 
 # 系统包括：   
@@ -16,6 +16,8 @@ with this framework, the developer can build the mircor-service endfront very fa
     
 # 前提条件:   
     linux机器有独立局域网ip并且能上网
+# pre-condition: 
+    a linux server which has a IP of LAN and could connect internet.
     
 # 安装步骤:   
 ## 1.下载vt-e-scripts，解压到 scripts/ 目录下
