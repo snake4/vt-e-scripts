@@ -22,20 +22,22 @@ cd scripts
 直到输出如下信息。安装成功(util the following message is output)   
 ![](https://github.com/snake4/vt-picture/blob/master/1.png)
 
-## 2.导入镜像(load images:)  
-下载镜像https://pan.baidu.com/s/156IQIvDFviINBPjG6zIzKQ
-提取码：d6iv   
-例如:docker load -i mysql.tar   
+## 2.导入镜像(load images):  
+下载镜像(download url):https://pan.baidu.com/s/156IQIvDFviINBPjG6zIzKQ
+提取码(pin code)：d6iv   
+例如(e.g.):  
+docker load -i mysql.tar   
 ![](https://github.com/snake4/vt-picture/blob/master/2.png)
 
-## 3.安装启动镜像(install image and start container)
+## 3.安装启动镜像(install image and start container):
 nexus,redis，nginx，mysql，maven,按这个顺序，在各自目录下执行./run.sh  
 如果没有导入镜像这一步也可以安装镜像  
 nexus,redis，nginx，mysql，maven,according to this sequence,make sure be their own folder,then ./run.sh  
 if you didn't load image before this step,it will take some time to install image
 
-## 4.安装完成确认
-执行docker ps | grep my   
+## 4.安装完成确认(installation confirmation):
+执行(execute)  
+docker ps | grep my   
 ![](https://github.com/snake4/vt-picture/blob/master/3.png)
 
 # 配置
