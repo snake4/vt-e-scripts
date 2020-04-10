@@ -30,10 +30,14 @@ docker load -i mysql.tar
 ![](https://github.com/snake4/vt-picture/blob/master/2.png)
 
 ## 3.安装启动镜像(install image and start container):
-nexus,redis，nginx，mysql，maven,按这个顺序，在各自目录下执行./run.sh  
+mysql,nexus,redis，nginx，maven,按这个顺序，在各自目录下执行./run.sh  
 如果没有导入镜像这一步也可以安装镜像  
-nexus,redis，nginx，mysql，maven,according to this sequence,make sure be their own folder,then ./run.sh  
-if you didn't load image before this step,it will take some time to install image
+最后 cd ../mysql
+执行 ./init_db.sh
+mysql,nexus,redis，nginx，maven,according to this sequence,make sure be their own folder,then ./run.sh  
+if you didn't load image before this step,it will take some time to install image  
+at last, cd ../mysql
+execute ./init_db.sh
 
 ## 4.安装完成确认(installation confirmation):
 执行(execute)  
