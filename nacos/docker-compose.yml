@@ -1,0 +1,27 @@
+version: "3.6"
+services:
+  my-nacos:
+    build: .
+    image: nacos/nacos-server:1.1.4
+    container_name: my-nacos
+
+    environment:
+      MODE: standalone
+      #SPRING_DATASOURCE_PLATFORM: mysql
+      #MYSQL_MASTER_SERVICE_HOST: my-mysql
+      #MYSQL_MASTER_SERVICE_DB_NAME: nacos
+      #MYSQL_MASTER_SERVICE_USER: root
+      #MYSQL_MASTER_SERVICE_PASSWORD: 123456
+    volumes:     
+      #- "./nacos_home/conf/application.properties:/home/nacos/conf/application.properties"
+      - "../hosts:/etc/hosts"
+    ports: 
+      - "8848:8848"
+
+    networks:
+      default:
+       ipv4_address: 172.24.0.65
+networks:
+  default:
+    external:
+      name: my-network

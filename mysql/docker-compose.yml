@@ -4,6 +4,7 @@ services:
     build: .
     image: daocloud.io/library/mysql:8.0.2
     container_name: my-mysql
+    restart: unless-stopped
     ports: 
       - "3306:3306"
     environment:

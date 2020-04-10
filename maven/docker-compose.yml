@@ -8,6 +8,7 @@ services:
     tty: true
     privileged: true
     working_dir: /home/myuser/projects
+    restart: unless-stopped
     environment:
       LANG: en_US.UTF-8
       LANGUAGE: en_US:en

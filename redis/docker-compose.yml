@@ -4,6 +4,7 @@ services:
     build: .
     image: redis:5.0
     container_name: my-redis
+    restart: unless-stopped
     ports: 
       - "6379:6379"
     volumes: 

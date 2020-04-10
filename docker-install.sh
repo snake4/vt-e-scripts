@@ -32,5 +32,9 @@ yum install -y pptp-setup
 firewall-cmd --direct --add-rule ipv4 filter INPUT 0 -i ens33 -p gre -j ACCEPT
 #添pptp网关路由
 route add -net 172.27.0.0/24 gw 172.27.0.7
+read -p "are you in china?(y/n): " inchina
+if [[ -n "$inchina" ]] && [ "$inchina" = "yes" -o "$inchina" = "y" -o "$inchina" = "YES" -o "$inchina" = "Y" ]; then
+    cp -f daemon.json  /etc/docker/daemon.json
+fi
 docker-compose -v
 echo "#############set docker compose done#################"
