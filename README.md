@@ -36,7 +36,7 @@ mysql,nexus,redis，nginx，maven,按这个顺序，在各自目录下执行./ru
 执行 ./init_db.sh  
 mysql,nexus,redis，nginx，maven,according to this sequence,make sure be their own folder,then ./run.sh  
 if you didn't load image before this step,it will take some time to install image  
-at last, cd ../mysql
+at last, cd ../mysql  
 execute ./init_db.sh
 
 ## 4.安装完成确认(installation confirmation):
