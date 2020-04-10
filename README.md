@@ -33,7 +33,7 @@ docker load -i mysql.tar
 mysql,nexus,redis，nginx，maven,按这个顺序，在各自目录下执行./run.sh  
 如果没有导入镜像这一步也可以安装镜像  
 最后 cd ../mysql
-执行 ./init_db.sh
+执行 ./init_db.sh  
 mysql,nexus,redis，nginx，maven,according to this sequence,make sure be their own folder,then ./run.sh  
 if you didn't load image before this step,it will take some time to install image  
 at last, cd ../mysql
