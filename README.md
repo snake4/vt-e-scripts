@@ -20,7 +20,7 @@
   nacos  | 1.1.4 | 服务注册,配置中心  
   sentinel  | 1.6.3 | 服务限流,降级  
   mycat  | TODO | 分库分表  
-  fastfds  | TODO | 分布式存储  
+  fastfds/mino  | TODO | 分布式存储  
   kafka  | TODO | 消息中间件  
   logstash  | TODO | 日志收集  
   elasticsearch  | TODO | 文档搜索    
