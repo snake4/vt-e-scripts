@@ -11,3 +11,4 @@
 172.24.0.75 my-zookeeper
 172.24.0.66 my-maven
 172.24.0.65 my-nacos
+172.24.0.61 my-sentinel

@@ -1,0 +1,34 @@
+version: "3.6"
+services:
+  my-sentinel:
+    build: .
+    image: sentinel:1.6.3
+    container_name: my-sentinel
+    stdin_open: true
+    tty: true
+    privileged: true
+    working_dir: /home/myuser
+    restart: unless-stopped
+    environment:
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALLL: en_US.UTF-8
+    volumes: 
+      - "./senti_home/sentinel-dashboard-1.6.3.jar:/home/myuser/sentinel-dashboard-1.6.3.jar"
+      - "../hosts:/etc/hosts"
+    ports: 
+      - "7180:8080"
+    command:
+      - /bin/bash
+      - -c
+      - | 
+        nohup java -jar sentinel-dashboard-1.6.3.jar >/dev/null 2>&1 &
+        sh
+
+    networks:
+      default:
+       ipv4_address: 172.24.0.61
+networks:
+  default:
+    external:
+      name: my-network
