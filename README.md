@@ -8,7 +8,7 @@
  
 # 主要技术以及软件版本(main technology and version of software)：
     springboot2.0.2 ，centos7(kernel 3.10 above)，docker19,redis5,nginx1.17,mysql8,nexus3
-    
+
 # 前提条件(pre-condition):   
     linux机器有独立局域网ip并且能上网  |
     a linux server which has a IP of LAN and could connect internet.

@@ -12,3 +12,6 @@
 172.24.0.66 my-maven
 172.24.0.65 my-nacos
 172.24.0.61 my-sentinel
+172.24.0.51 my-mycat
+172.24.0.101 my-mysql-master1
+172.24.0.201 my-mysql-slave1
