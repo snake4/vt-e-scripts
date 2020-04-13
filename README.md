@@ -7,8 +7,27 @@
     authentication center, authentication client,  arbitrary multi-datasource, log4j2 ,security of http,thread pool, redisson distribute lock and so on
  
 # 主要技术以及软件版本(main technology and version of software)：
-    springboot2.0.2 ，centos7(kernel 3.10 above)，docker19,redis5,nginx1.17,mysql8,nexus3
-
+   
+  名称(name)  | 版本(version) | 描述(description)
+  ------------- | ------------- | ------------- 
+  centos  | 7 kernel 3.10 | 操作系统 
+  docker-ce  | 19 | 容器 
+  springboot/springcloud   | 2.0.2 | 开发框架 
+  redis  | 5 | 缓存,从4以后提供RDB AOF混合持久化策略 (可集群)
+  nginx  | 1.17 | 动静分离,反向代理,负债均衡,限流,web安全
+  mysql  | 8 | 数据库(可分库后采用双主一丛,保证高可用高性能)
+  nexus  | 3 | maven私服
+  nacos  | 1.1.4 | 服务注册,配置中心  
+  sentinel  | 1.6.3 | 服务限流,降级  
+  mycat  | TODO | 分库分表  
+  fastfds/mino  | TODO | 分布式存储  
+  kafka  | TODO | 消息中间件  
+  logstash  | TODO | 日志收集  
+  elasticsearch  | TODO | 文档搜索    
+  spark  | TODO | 并行运算  
+  hbase  | TODO | 大表  
+  activiti+bpmn  | TODO | 流程引擎  
+  
 # 前提条件(pre-condition):   
     linux机器有独立局域网ip并且能上网  |
     a linux server which has a IP of LAN and could connect internet.
