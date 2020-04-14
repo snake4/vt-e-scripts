@@ -2,7 +2,7 @@ version: "3.6"
 services:
   my-mysql-slave1: 
     build: .
-    image: my-mysql-master:8.0.2
+    image: my-mysql-slave:8.0.2
     container_name: my-mysql-slave1
     #restart: unless-stopped
     ports: 
@@ -11,8 +11,8 @@ services:
       MYSQL_ROOT_PASSWORD: "123456"
       MYSQL_ROOT_HOST: "%"
     volumes: 
-      - "./master_home/data:/var/lib/mysql"
-      - "./master_home/config/my.cnf:/etc/mysql/my.cnf"
+      - "./slave_home/data:/var/lib/mysql"
+      - "./slave_home/config/my.cnf:/etc/mysql/my.cnf"
       - "../hosts:/etc/hosts"
     entrypoint: 
       - docker-entrypoint.sh
