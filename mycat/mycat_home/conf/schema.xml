@@ -5,15 +5,16 @@
 	<schema name="TESTDB" checkSQLschema="true" sqlMaxLimit="100" randomDataNode="dn1">
 		<!-- auto sharding by id (long) -->
 		<!--splitTableNames 启用<table name 属性使用逗号分割配置多个表,即多个表使用这个配置-->
-		<table name="travelrecord,address" dataNode="dn1,dn2,dn3" rule="auto-sharding-long" splitTableNames ="true"/>
+		<!-- <table name="travelrecord,address" dataNode="dn1,dn2,dn3" rule="auto-sharding-long" splitTableNames ="true"/> -->
+		<table name="mytable" dataNode="dn1,dn2" rule="mod-long" splitTableNames ="true"/>
 		<!-- <table name="oc_call" primaryKey="ID" dataNode="dn1$0-743" rule="latest-month-calldate"
 			/> -->
 	</schema>
 	<!-- <dataNode name="dn1$0-743" dataHost="localhost1" database="db$0-743"
 		/> -->
-	<dataNode name="dn1" dataHost="localhost1" database="db1" />
-	<dataNode name="dn2" dataHost="localhost1" database="db2" />
-	<dataNode name="dn3" dataHost="localhost1" database="db3" />
+	<dataNode name="dn1" dataHost="localhost1" database="mydb" />
+	<dataNode name="dn2" dataHost="localhost1" database="mydb2" />
+	<!-- <dataNode name="dn3" dataHost="localhost1" database="db3" /> -->
 	<!--<dataNode name="dn4" dataHost="sequoiadb1" database="SAMPLE" />
 	 <dataNode name="jdbc_dn1" dataHost="jdbchost" database="db1" />
 	<dataNode	name="jdbc_dn2" dataHost="jdbchost" database="db2" />
@@ -22,11 +23,14 @@
 			  writeType="0" dbType="mysql" dbDriver="native" switchType="1"  slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
 		<!-- can have multi write hosts -->
-		<writeHost host="hostM1" url="localhost:3306" user="root"
+		<writeHost host="hostM1" url="my-mysql-master1:3306" user="root"
 				   password="123456">
+			<readHost host="hostS1" url="my-mysql-slave1:3306" user="root" password="123456"/>
 		</writeHost>
+		
 		<!-- <writeHost host="hostM2" url="localhost:3316" user="root" password="123456"/> -->
 	</dataHost>
+
 	<!--
 		<dataHost name="sequoiadb1" maxCon="1000" minCon="1" balance="0" dbType="sequoiadb" dbDriver="jdbc">
 		<heartbeat> 		</heartbeat>
