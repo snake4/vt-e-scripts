@@ -334,7 +334,7 @@ under the License.
       </releases>
      <!-- 表示可以从这个仓库下载snapshot版本的构件 -->  
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
     </repository>
   </repositories>
@@ -346,7 +346,7 @@ under the License.
       <url>http://my-nexus:8081/repository/maven-releases/</url>
       <layout>default</layout>
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
       <releases>
          <enabled>true</enabled>
@@ -367,7 +367,7 @@ under the License.
       <layout>default</layout>
      <!-- 表示可以从这个仓库下载releases版本的构件-->  
       <releases>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </releases>
      <!-- 表示可以从这个仓库下载snapshot版本的构件 -->  
       <snapshots>
@@ -386,7 +386,7 @@ under the License.
         <enabled>true</enabled>
       </snapshots>
       <releases>
-         <enabled>true</enabled>
+         <enabled>false</enabled>
       </releases>
     </pluginRepository>
   </pluginRepositories>
