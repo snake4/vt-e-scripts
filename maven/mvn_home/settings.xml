@@ -319,7 +319,7 @@ under the License.
     </profile>
     -->
 	 <profile>
-  <id>nexus-pr</id>
+  <id>nexus-rl</id>
    <!-- 远程仓库列表 -->
   <repositories>
     <repository>
@@ -355,6 +355,43 @@ under the License.
   </pluginRepositories>
    </profile>
  
+  <profile>
+  <id>nexus-sn</id>
+   <!-- 远程仓库列表 -->
+  <repositories>
+    <repository>
+      <id>my-nexus-snapshots</id>
+      <name>Nexus Central</name>
+     <!-- 虚拟的URL形式,指向镜像的URL-->
+      <url>http://my-nexus:8081/repository/maven-snapshots/</url>
+      <layout>default</layout>
+     <!-- 表示可以从这个仓库下载releases版本的构件-->  
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+     <!-- 表示可以从这个仓库下载snapshot版本的构件 -->  
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+   <!-- 插件仓库列表 -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>my-nexus-snapshots</id>
+      <name>Nexus Central</name>
+      <url>http://my-nexus:8081/repository/maven-snapshots/</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+         <enabled>true</enabled>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
+   </profile>
+   
   </profiles>
 
   <!-- activeProfiles
@@ -366,8 +403,8 @@ under the License.
   </activeProfiles>
   -->
   <activeProfiles>
-    
-    <activeProfile>nexus-pr</activeProfile>
+    <activeProfile>nexus-sn</activeProfile>
+    <activeProfile>nexus-rl</activeProfile>
   </activeProfiles>
 
 </settings>
