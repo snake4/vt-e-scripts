@@ -191,6 +191,14 @@ under the License.
         <url>http://repository.jboss.org/nexus/content/groups/public</url>  
     </mirror>  -->
 	 
+	<mirror>
+        <id>my-nexus-snapshots</id>
+        <name>internal nexus repository</name>
+        <!--镜像采用配置好的组的地址-->
+        <url>http://my-nexus:8081/repository/maven-snapshots/</url>
+        <mirrorOf>my-nexus-snapshots</mirrorOf>
+    </mirror>
+	
     <mirror>
         <id>my-nexus-releases</id>
         <name>internal nexus repository</name>
