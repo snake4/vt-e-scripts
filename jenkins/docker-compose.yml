@@ -7,11 +7,20 @@ services:
     ports: 
       - "7800:8080"
       - "50000:50000"
-    volumes: ["./jenkins_home:/var/jenkins_home","../hosts:/etc/hosts"] 
-    entrypoint: 
-      - /sbin/tini
-      - --
-      - /usr/local/bin/jenkins.sh
+    volumes: 
+      - "./jenkins_home:/var/jenkins_home"
+      - "../wokspace_share/projects:/home/myuser/projects"
+      - "../hosts:/etc/hosts"
+#    entrypoint: 
+#      - /sbin/tini
+#      - --
+#      - /usr/local/bin/jenkins.sh
+    command:
+      - /bin/bash
+      - -c
+      - | 
+        chmod 777 -R /home/myuser/projects
+        /sbin/tini -- /usr/local/bin/jenkins.sh
     networks:
       default:
        ipv4_address: 172.24.0.88

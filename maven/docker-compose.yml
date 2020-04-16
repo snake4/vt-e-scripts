@@ -16,7 +16,8 @@ services:
     volumes: 
       - "./mvn_home/settings.xml:/usr/share/maven/conf/settings.xml"
       - "./mvn_home/projects/:/home/myuser/projects/"
-      - "./mvn_home/repository/:/root/.m2/repository/"       
+      - "./mvn_home/repository/:/root/.m2/repository/" 
+      - "../wokspace_share/projects/:/home/myuser/depoly/"         
       - "../hosts:/etc/hosts"
     ports: 
       - "8380:8380"
@@ -25,7 +26,7 @@ services:
       - /bin/bash
       - -c
       - | 
-        sh
+        /usr/sbin/sshd -D
     networks:
       default:
        ipv4_address: 172.24.0.66
