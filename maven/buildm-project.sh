@@ -23,28 +23,9 @@ if [ -n "$1" ]; then
 fi
 
 
-project=vt-c-projectUtils
+project=vt-c-starter-parent
 cloneAndDeploy $project $cid
 
-
-project=vt-c-redisson
-cloneAndDeploy $project $cid
-
-
-project=vt-c-shiroJpa
-cloneAndDeploy $project $cid
-
-project=vt-c-logAndSecurityAndThreadPool
-cloneAndDeploy $project $cid
-
-project=vt-c-shiroClient
-cloneAndDeploy $project $cid
-
-project=vt-c-jxlss
-cloneAndDeploy $project $cid
-
-project=vt-c-dataSourceMulti
-cloneAndDeploy $project $cid
 
 project=vt-s-authenCenter
 cloneAndPackageAndStart $project $cid
