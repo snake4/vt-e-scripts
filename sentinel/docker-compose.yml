@@ -17,12 +17,12 @@ services:
       - "./senti_home/sentinel-dashboard-1.6.3.jar:/home/myuser/sentinel-dashboard-1.6.3.jar"
       - "../hosts:/etc/hosts"
     ports: 
-      - "7180:8080"
+      - "7180:7180"
     command:
       - /bin/bash
       - -c
       - | 
-        nohup java -jar sentinel-dashboard-1.6.3.jar >/dev/null 2>&1 &
+        nohup java -jar sentinel-dashboard-1.6.3.jar --server.port=7180 >/dev/null 2>&1 &
         sh
 
     networks:

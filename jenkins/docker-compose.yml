@@ -11,6 +11,7 @@ services:
       - "./jenkins_home:/var/jenkins_home"
       - "../wokspace_share/projects:/home/myuser/projects"
       - "../hosts:/etc/hosts"
+    restart: unless-stopped
 #    entrypoint: 
 #      - /sbin/tini
 #      - --
