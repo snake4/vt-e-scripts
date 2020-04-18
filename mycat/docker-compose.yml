@@ -1,0 +1,34 @@
+version: "3.6"
+services:
+  my-mycat:
+    build: .
+    image: mycat-server:1.6.7.4
+    container_name: my-mycat
+    stdin_open: true
+    tty: true
+    privileged: true
+    working_dir: /home/myuser
+    restart: unless-stopped
+    environment:
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALLL: en_US.UTF-8
+    volumes: 
+      - "./mycat_home/conf/:/home/myuser/mycat/conf/"
+      - "../hosts:/etc/hosts"
+    ports: 
+      - "8066:8066"
+    command:
+      - /bin/bash
+      - -c
+      - | 
+        /home/myuser/mycat/bin/mycat start
+        sh
+
+    networks:
+      default:
+       ipv4_address: 172.24.0.51
+networks:
+  default:
+    external:
+      name: my-network

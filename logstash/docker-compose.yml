@@ -1,0 +1,24 @@
+version: "3.6"
+services:
+  my-logstash:
+    build: . 
+    image: logstash:6.8.8
+    container_name: my-logstash
+    restart: unless-stopped
+    hostname: 'my-logstash'
+
+    ports: 
+      - "5044:5044"
+      - "9600:9600"
+
+    volumes: 
+      - "./log_home/config/:/usr/share/logstash/config/"
+      - "../hosts:/etc/hosts"
+    networks:
+      default:
+       ipv4_address: 172.24.0.76
+networks:
+  default:
+    external:
+      name: my-network
+

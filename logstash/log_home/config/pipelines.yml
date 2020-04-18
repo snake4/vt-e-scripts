@@ -1,0 +1,3 @@
+- pipeline.id: my-logstash
+  path.config: "/usr/share/logstash/config/*.conf"
+  pipeline.workers: 3

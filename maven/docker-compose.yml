@@ -1,0 +1,36 @@
+version: "3.6"
+services:
+  my-maven:
+    build: .
+    image: maven:3-jdk-8
+    container_name: my-maven
+    stdin_open: true
+    tty: true
+    privileged: true
+    working_dir: /home/myuser/projects
+    restart: unless-stopped
+    environment:
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALLL: en_US.UTF-8
+    volumes: 
+      - "./mvn_home/settings.xml:/usr/share/maven/conf/settings.xml"
+      - "./mvn_home/projects/:/home/myuser/projects/"
+      - "./mvn_home/repository/:/root/.m2/repository/" 
+      - "../wokspace_share/projects/:/home/myuser/depoly/"         
+      - "../hosts:/etc/hosts"
+    ports: 
+      - "8380:8380"
+      - "8329:8329"
+    command:
+      - /bin/bash
+      - -c
+      - | 
+        /usr/sbin/sshd -D
+    networks:
+      default:
+       ipv4_address: 172.24.0.66
+networks:
+  default:
+    external:
+      name: my-network
