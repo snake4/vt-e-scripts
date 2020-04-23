@@ -30,6 +30,8 @@ docker network create --subnet=172.24.0.0/24 my-network
 yum install -y pptp
 yum install -y pptp-setup
 firewall-cmd --direct --add-rule ipv4 filter INPUT 0 -i ens33 -p gre -j ACCEPT
+echo "firewall-cmd --direct --add-rule ipv4 filter INPUT 0 -i ens33 -p gre -j ACCEPT" >> /etc/rc.local
+chmod +x /etc/rc.local
 #添pptp网关路由
 route add -net 172.27.0.0/24 gw 172.27.0.7
 read -p "are you in china?(y/n): " inchina

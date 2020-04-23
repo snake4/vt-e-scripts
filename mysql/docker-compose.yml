@@ -12,7 +12,7 @@ services:
       MYSQL_ROOT_HOST: "%"
     volumes: 
       - "./mysql_home/data:/var/lib/mysql"
-      - "./mysql_home/config:/etc/mysql/conf.d"
+      - "./mysql_home/config/my.cnf:/etc/mysql/my.cnf"
       - "../hosts:/etc/hosts"
     entrypoint: 
       - docker-entrypoint.sh
