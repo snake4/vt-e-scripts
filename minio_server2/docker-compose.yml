@@ -1,0 +1,35 @@
+version: "3.6"
+services:
+  my-minio_s2:
+    build: .
+    image: minio/minio:202004
+    container_name: my-minio_s2
+    #stdin_open: true
+    #tty: true
+    #privileged: true
+    #working_dir: /home/myuser
+    restart: unless-stopped
+    environment:
+      MINIO_ACCESS_KEY: minio123456 
+      MINIO_SECRET_KEY: minio123456
+      
+    volumes: 
+      - "./minio_home/config:/root/.minio"
+      - "./minio_home/data/v1:/data1"
+      - "./minio_home/data/v2:/data2"
+      - "../hosts:/etc/hosts"
+    ports: 
+      - "9001:9000" 
+    command: 
+      - server
+      - http://172.24.0.131/data1
+      - http://172.24.0.131/data2 
+      - http://172.24.0.231/data1
+      - http://172.24.0.231/data2 
+    networks:
+      default:
+       ipv4_address: 172.24.0.231
+networks:
+  default:
+    external:
+      name: my-network
