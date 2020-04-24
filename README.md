@@ -21,7 +21,7 @@
   sentinel  | 1.6.3 | 服务限流,降级  
   mycat  | 1.6.7.4 | 分库分表  
   xxl-job  | 2.2.0 | 分布式定时任务
-  fastfds/minio  | TODO | 分布式存储  
+  minio  | 2020-04 | 分布式存储  
   skywalking | TODO| 服务链追踪
   kafka  | TODO | 消息中间件  
   logstash  | TODO | 日志收集  
