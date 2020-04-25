@@ -22,6 +22,7 @@
   mycat  | 1.6.7.4 | 分库分表  
   xxl-job  | 2.2.0 | 分布式定时任务 |  控制台:http://xxxx:8184/
   minio  | 2020-04 | 分布式存储  | http://my-minio:9000/
+  seata  | TODO | 分布式事务  |  
   skywalking | TODO| 服务链追踪 |
   kafka  | TODO | 消息中间件  |
   logstash  | TODO | 日志收集  |
