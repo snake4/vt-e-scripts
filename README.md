@@ -22,7 +22,7 @@
   mycat  | 1.6.7.4 | 分库分表  
   xxl-job  | 2.2.0 | 分布式定时任务 |  控制台:http://xxxx:8184/
   minio  | 2020-04 | 分布式存储  | http://my-minio:9000/
-  seata  | TODO | 分布式事务  |  
+  seata  | 1.1.0 | 分布式事务  |  用了mysql8来做globaltransaction中间存储,feign+nacos+seata实现分布式事务
   skywalking | TODO| 服务链追踪 |
   kafka  | TODO | 消息中间件  |
   logstash  | TODO | 日志收集  |
@@ -132,10 +132,9 @@ without http header setting of Authorization
 现在目前阶段主要完成vt-pc-admin 的前端开发，伙伴们可发送简历至邮箱
 
 # 赞赏(donation)
-开源不易,觉得不错就帮忙点个星吧   
-也可以请作者喝杯咖啡,感谢支持  
+觉得不错就帮忙点个星吧   
 if you think what we did is good,then give us a star please  
-also appreciate for buying us a cup of coffee.  
-![](https://github.com/snake4/vt-picture/blob/master/skm.png)
+
+
 
 
