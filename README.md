@@ -132,9 +132,15 @@ without http header setting of Authorization
 现在目前阶段主要完成vt-pc-admin 的前端开发，伙伴们可发送简历至邮箱
 
 # 感谢(thanks)
-主要参考源码
+主要参考源码以及文档
 ![spring cloud alibaba gitee]https://gitee.com/johnlilijun/spring-cloud-alibaba
 ![spring cloud alibaba github]https://github.com/alibaba/spring-cloud-alibaba
+![minio]https://docs.min.io/
+![docker]https://hub.docker.com/
+![daoCloud]https://hub.daocloud.io/
+![docker-compose]https://docs.docker.com/compose/
+![mycat]http://www.mycat.org.cn/
+![spring cloud]https://spring.io/projects/spring-cloud
 觉得不错就帮忙点个星吧   
 if you think what we did is not bad, give us a star please  
 
