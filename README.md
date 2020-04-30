@@ -145,6 +145,6 @@ without http header setting of Authorization
 觉得不错就帮忙点个星吧   
 if you think what we did is not bad, give us a star please  
 
-
-
-
+# 尚未公开部分(not opened yet)  
+![组件部分](https://github.com/snake4/vt-picture/blob/master/unopen_compounent.png)  
+![服务部分](https://github.com/snake4/vt-picture/blob/master/unopen1.png)
