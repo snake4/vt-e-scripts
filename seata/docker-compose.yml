@@ -1,0 +1,35 @@
+version: "3.6"
+services:
+  my-seata:
+    build: .
+    image: seata:1.1.0
+    container_name: my-seata
+    stdin_open: true
+    tty: true
+    privileged: true
+    #working_dir: /home/myuser/projects
+    restart: unless-stopped
+    environment:
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALLL: en_US.UTF-8
+    volumes: 
+      - "./seata_home/conf/registry.conf:/opt/seata/conf/registry.conf"
+      - "./seata_home/conf/file.conf:/opt/seata/conf/file.conf"
+      - "./mysql-connector-java-5.1.46.jar:/opt/seata/lib/mysql-connector-java-5.1.30.jar"
+      - "../hosts:/etc/hosts"
+    ports: 
+      - "8091:8091"
+
+    command:
+      - /bin/bash
+      - -c
+      - | 
+        sh
+    networks:
+      default:
+       ipv4_address: 172.24.0.62
+networks:
+  default:
+    external:
+      name: my-network
