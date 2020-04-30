@@ -131,6 +131,7 @@ without http header setting of Authorization
 要求:对前端开源技术热爱,精通vue2,node.js,elementui,uni-app开发，以及各种组件的使用，并且具有自己开发组件的能力  
 现在目前阶段主要完成vt-pc-admin 的前端开发，伙伴们可发送简历至邮箱
 
+
 # 感谢(thanks)
 主要参考源码以及文档
 ![spring cloud alibaba gitee]https://gitee.com/johnlilijun/spring-cloud-alibaba
