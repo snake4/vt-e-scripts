@@ -133,7 +133,7 @@ without http header setting of Authorization
 
 
 # 感谢(thanks)
-主要参考源码以及文档
+主要参考源码以及文档   
 [spring cloud alibaba gitee](https://gitee.com/johnlilijun/spring-cloud-alibaba)  
 [spring cloud alibaba github](https://github.com/alibaba/spring-cloud-alibaba)  
 [minio](https://docs.min.io/)  
