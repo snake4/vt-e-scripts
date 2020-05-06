@@ -1,0 +1,34 @@
+version: "3.6"
+services:
+  my-kafka:
+    build: .
+    image: kafka:2.12-2.3.0
+    container_name: my-kafka
+    stdin_open: true
+    tty: true
+    privileged: true
+    #working_dir: /home/myuser/projects
+    restart: unless-stopped
+    environment:
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALLL: en_US.UTF-8
+    volumes: 
+      - "./kafka_home/conf/server.properties:/opt/kafka_2.12-2.3.0/config/server.properties"
+      - "./kafka_home/log:/tmp/kafka-logs"
+      - "../hosts:/etc/hosts"
+    ports: 
+      - "9092:9092"
+
+    command:
+      - /bin/bash
+      - -c
+      - | 
+        sh
+    networks:
+      default:
+       ipv4_address: 172.24.0.78
+networks:
+  default:
+    external:
+      name: my-network

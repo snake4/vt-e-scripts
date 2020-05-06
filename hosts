@@ -6,6 +6,7 @@
 172.24.0.5 my-nginx
 172.24.0.6 my-redis
 172.24.0.90 my-nexus
+172.24.0.78 my-kafka
 172.24.0.77 my-elasticsearch
 172.24.0.76 my-logstash
 172.24.0.75 my-zookeeper
