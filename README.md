@@ -24,7 +24,8 @@
   minio  | 2020-04 | 分布式存储  | http://my-minio:9000/
   seata  | 1.1.0 | 分布式事务  |  用了mysql8来做globaltransaction中间存储,feign+nacos+seata实现分布式事务
   skywalking | TODO| 服务链追踪 |
-  kafka  | TODO | 消息中间件  |
+  kafka  | 2.12-2.3.0 | 消息中间件  |
+  zookeeper  | 3.4.14 | 分布式应用协调器  |
   logstash  | TODO | 日志收集  |
   elasticsearch  | TODO | 文档搜索 |    
   spark  | TODO | 并行运算  |
