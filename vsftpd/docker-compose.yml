@@ -1,0 +1,31 @@
+version: "3.6"
+services:
+  my-vsftpd:
+    build: .
+    image: vsftpd:3.0
+    container_name: my-vsftpd
+    restart: unless-stopped
+    environment:
+#      LANG: en_US.UTF-8
+#      LANGUAGE: en_US:en
+#      LC_ALLL: en_US.UTF-8
+      FTP_USER: bigdata
+      FTP_PASS: bigdata2019
+      PASV_ADDRESS: 192.168.75.128 #宿主主机ip,被动模式一定需要,因为客户端要通过ip:2110x 来连接ftp服务器
+    ports: 
+      - "20:20"
+      - "21:21"
+      - "21100-21110:21100-21110"
+    volumes: 
+      #- "./vsftpd_home/log:/var/log/vsftpd"
+      - "./vsftpd_home/createUser.sh:/home/createUser.sh"
+      - "/home/ftp:/home/vsftpd"
+      - "../hosts:/etc/hosts"
+    
+    networks:
+      default:
+       ipv4_address: 172.24.0.2
+networks:
+  default:
+    external:
+      name: my-network
