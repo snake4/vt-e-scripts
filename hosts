@@ -7,6 +7,7 @@
 172.24.0.6 my-redis
 172.24.0.2 my-vsftpd
 172.24.0.90 my-nexus
+172.24.0.79 my-kibana
 172.24.0.78 my-kafka
 172.24.0.77 my-elasticsearch
 172.24.0.76 my-logstash

@@ -12,7 +12,8 @@ services:
       - "9600:9600"
 
     volumes: 
-      - "./log_home/config/:/usr/share/logstash/config/"
+      - "./log_home/config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf"
+      - "./log_home/config/logstash.yml:/usr/share/logstash/config/logstash.yml"
       - "../hosts:/etc/hosts"
     networks:
       default:

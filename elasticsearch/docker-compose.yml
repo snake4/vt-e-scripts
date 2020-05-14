@@ -2,7 +2,7 @@ version: "3.6"
 services:
   my-elasticsearch:
     build: . 
-    image: elasticsearch:5.4.2
+    image: elasticsearch:5.6.9
     container_name: my-elasticsearch
     restart: unless-stopped
     hostname: 'my-elasticsearch'
@@ -14,6 +14,7 @@ services:
 
     volumes: 
       - "./es_home/data:/usr/share/elasticsearch/data"
+      - "./es_home/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
       - "../hosts:/etc/hosts"
     networks:
       default:

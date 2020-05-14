@@ -1,0 +1,21 @@
+version: "3.6"
+services:
+  my-kibana:
+    build: . 
+    image: kibana:5.6.9
+    container_name: my-kibana
+    restart: unless-stopped
+    hostname: 'my-kibana'
+    ports: 
+      - "5601:5601"
+    volumes: 
+      - "./kb_home/kibana.yml:/etc/kibana/kibana.yml"
+      - "../hosts:/etc/hosts"
+    networks:
+      default:
+       ipv4_address: 172.24.0.79
+networks:
+  default:
+    external:
+      name: my-network
+
