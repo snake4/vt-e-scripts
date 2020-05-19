@@ -27,8 +27,8 @@
   rocketMQ  | TODO | 消息中间件(业务处理)  |
   kafka  | 2.12-2.3.0 | 消息中间件(用来处理日志)  |
   zookeeper  | 3.4.14 | 分布式应用协调器  |
-  logstash  | TODO | 日志收集  |
-  elasticsearch  | TODO | 文档搜索 |    
+  logstash  | 6.8.8 | 日志收集  |
+  elasticsearch  | 5.6.9 | 文档搜索 |    
   spark  | TODO | 并行运算  |
   hbase  | TODO | 大表  |
   activiti+bpmn  | TODO | 流程引擎  |
